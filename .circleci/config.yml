@@ -46,9 +46,7 @@ jobs:
       # https://nose.readthedocs.io
       - run:
           name: run python tests
-          command: |
-#            . venv/bin/activate
-            python -m unittest
+          command: python -m unittest
 
 #      - store_artifacts:
 #          path: test-reports
