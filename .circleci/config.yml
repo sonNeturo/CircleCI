@@ -46,7 +46,7 @@ jobs:
       # https://nose.readthedocs.io
       - run:
           name: run python tests
-          command: python -m unittest
+          command: python -m unittest src/test/python/CircleCI_POC/test_python.py
 
 #      - store_artifacts:
 #          path: test-reports
