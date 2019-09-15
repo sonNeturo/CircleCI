@@ -10,7 +10,6 @@ jobs:
     steps:
       - checkout
 
-
   testPython:
     docker:
       - image: circleci/python:3.6.1
@@ -24,23 +23,23 @@ jobs:
       - image: circleci/openjdk:8-jdk
     steps:
       - run:
-          name: run java/scala tests
+          name: run java and scala tests
           command: mvn package
 
-  workflows:
-    version: 2
-    build_and_test:
-      jobs:
-        - build
-        - testPython:
-            requires:
-              - build
-            filters:
-              branches:
-                only: master
-        - testJVM:
-            requires:
-              - build
-            filters:
-              branches:
-                only: master
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - testPython:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+      - testJVM:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
