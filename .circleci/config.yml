@@ -39,16 +39,16 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - build
+#      - build
       - testPython:
-          requires:
-            - build
+#          requires:
+#            - build
           filters:
             branches:
               only: master
       - testJVM:
-          requires:
-            - build
+#          requires:
+#            - build
           filters:
             branches:
               only: master
