@@ -22,6 +22,7 @@ jobs:
   testJVM:
     docker:
       - image: circleci/openjdk:8-jdk
+    steps:
       - run:
           name: run java/scala tests
           command: mvn package
