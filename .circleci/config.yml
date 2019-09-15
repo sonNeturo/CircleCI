@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - checkout
-      -run:
+      - run:
           name: run java and scala tests
           command: mvn package
 
