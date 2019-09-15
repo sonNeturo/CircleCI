@@ -1,4 +1,4 @@
 Circle CI POC with examples in:
-*Java
-*Scala
-*Python
+* Java
+* Scala
+* Python
