@@ -26,3 +26,21 @@ jobs:
       - run:
           name: run java/scala tests
           command: mvn package
+
+  workflows:
+    version: 2
+    build_and_test:
+      jobs:
+        - build
+        - testPython:
+            requires:
+              - build
+            filters:
+              branches:
+                only: master
+        - testJVM:
+            requires:
+              - build
+            filters:
+              branches:
+                only: master
