@@ -1,5 +1,3 @@
-package CircleCI_POC;
-
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
@@ -11,8 +9,8 @@ public class TestJava {
         assertTrue(true);
     }
 
-    @Test
-    public void testFail() {
-        assertTrue(false);
-    }
+//    @Test
+//    public void testFail() {
+//        assertTrue(false);
+//    }
 }

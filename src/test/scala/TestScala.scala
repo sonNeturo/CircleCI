@@ -1,7 +1,5 @@
-package CircleCI_POC
-
+import org.junit.Assert._
 import org.junit._
-import Assert._
 
 @Test
 class TestScala {
@@ -9,8 +7,8 @@ class TestScala {
     @Test
     def testOK(): Unit = assertTrue(true)
 
-    @Test
-    def testKO() = assertTrue(false)
+//    @Test
+//    def testKO() = assertTrue(false)
 
 }
 
